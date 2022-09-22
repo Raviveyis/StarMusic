@@ -173,10 +173,10 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="📝 Destek",
-                            url=f"https://t.me/Sakin_Tiklama"),
+                            url=f"https://t.me/lovelesslifee"),
                     InlineKeyboardButton(
                             text="📍 Sohbet",
-                            url=f"https://t.me/MajesteSohbetTr"),                   
+                            url=f"https://t.me/lovelesslifee"),                   
                ],
             ]
         )
@@ -214,10 +214,10 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="📝 Destek",
-                            url=f"https://t.me/Sakin_Tiklama"),
+                            url=f"https://t.me/lovelesslifee"),
                     InlineKeyboardButton(
                             text="📍 Sohbet",
-                            url=f"https://t.me/MajesteSohbetTr"),                   
+                            url=f"https://t.me/lovelesslifee"),                   
                ],
             ]
         )
@@ -232,10 +232,10 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="📝 Destek",
-                            url=f"https://t.me/Sakin_Tiklama"),
+                            url=f"https://t.me/lovelesslifee"),
                     InlineKeyboardButton(
                             text="📍 Sohbet",
-                            url=f"https://t.me/MajesteSohbetTr"),                   
+                            url=f"https://t.me/lovelesslifee"),                   
                ],
             ]
         )
@@ -288,10 +288,10 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="📝 Destek",
-                            url=f"https://t.me/Sakin_Tiklama"),
+                            url=f"https://t.me/lovelesslifee"),
                     InlineKeyboardButton(
                             text="📍 Sohbet",
-                            url=f"https://t.me/MajesteSohbetTr"),                   
+                            url=f"https://t.me/lovelesslifee"),                   
                ],
             ]
         )
