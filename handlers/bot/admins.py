@@ -26,8 +26,8 @@ END = "https://telegra.ph/file/30525f90e119bf95d9d80.jpg"
 
 BUTTON = [
     [
-        InlineKeyboardButton(text="📝 Destek", url=f"https://t.me/Sakin_Tiklama"),
-        InlineKeyboardButton(text="📍Sohbet", url=f"https://t.me/MajesteSohbetTr"), 
+        InlineKeyboardButton(text="📝 Destek", url=f"https://t.me/lovelesslifee"),
+        InlineKeyboardButton(text="📍Sohbet", url=f"https://t.me/lovelesslifee"), 
     ],
 ]
 
