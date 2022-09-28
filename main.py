@@ -22,10 +22,10 @@ bot = Bot(
 async def main():
     async with bot:
         try:
-            await USER.join_chat("Sakin_Tiklama")
-            await USER.join_chat("JokerS2err")
-            await USER.join_chat("MajesteSohbetTr")
-            await USER.join_chat("MahserSohbet")
+            await USER.join_chat("lovelesslifee")
+            await USER.join_chat("lovelesslifee")
+            await USER.join_chat("lovelesslifee")
+            await USER.join_chat("lovelesslifee")
         except UserAlreadyParticipant:
             pass
         except Exception as e:
