@@ -127,25 +127,25 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b><i>Şarkı çalabilmem için yönetici olmam gerekiyor lütfen yönetici yapın beni!</i></b>")
+                        "<b><i>Musiqi oxuya bilmem üçün yönetici olmam gerekir lütfen yönetici edin meni!</i></b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "Müzik asistanı gruba katıldı")
+                        message.chat.id, "Musiqi asistanı qrupa qatıldı")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b><i>Şarkı çalmıyor asistanın banlanmadığına emin olun🌟🌟</i></b>")
+                        f"<b><i>Musiqi oxuya bilmem üçün  asistanın banlanmadığına emin olun🌟🌟</i></b>")
     
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i><b>bekleyin {user.first_name}, Asistanı gruba eklemek için /katil yazınız 🌟🌟</b></i>")
+            f"<i><b>bekleyin {user.first_name}, Asistanı qrupa qatmaq üçün /qatıl yazın 🌟🌟</b></i>")
         return
     
     audio = (
@@ -158,7 +158,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 360) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**İstenilen şarkı süre sınırını aştı {DURATION_LIMIT} uzun süreli kullanımlar için izin verilmiyor❌**"
+                f"**İstenilen şarkı süre sınırını aştı {DURATION_LIMIT} uzun müddetli istifade üçün izin verilmir❌**"
             )
 
         file_name = get_file_name(audio)
@@ -242,7 +242,7 @@ async def play(_, message: Message):
     
         if (dur / 360) > DURATION_LIMIT:
             await lel.edit(
-                f"**İstenilen şarkı süre sınırını aştı {DURATION_LIMIT} uzun süreli kullanımlar için izin verilmiyor ‍ ❌**"
+                f"**İstenilen musiqi süre heddini keçdi {DURATION_LIMIT} uzun müddetli istifade üçün izin verilmir ‍ ❌**"
             )
             return
         requested_by = message.from_user.first_name
@@ -251,7 +251,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "Kullanım:\n > `/oynat` ( Şarkı adı ) "
+                "Kullanım:\n > `/oxu` ( Musiqi adı ) "
             )
         await lel.edit("▫️**Yükleniyor** 🌟")
         query = message.text.split(None, 1)[1]
@@ -278,7 +278,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**Sorgunuz bulunamadı tekrar deneyin **"
+                "**Sorqunuz tapılmadı tekrar yoxlayın **"
             )
             print(str(e))
             return
@@ -290,7 +290,7 @@ async def play(_, message: Message):
                             text="📝 Destek",
                             url=f"https://t.me/lovelesslifee"),
                     InlineKeyboardButton(
-                            text="📍 Sohbet",
+                            text="📍 Söhbet",
                             url=f"https://t.me/lovelesslifee"),                   
                ],
             ]
@@ -298,7 +298,7 @@ async def play(_, message: Message):
     
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**İstenilen şarkı süre sınırını aştı {DURATION_LIMIT} uzun süreli kullanımlara izin verilmiyor ❌**"
+                f"**İstenilen musiqi müddeti heddini keçdi {DURATION_LIMIT} uzun süreli kullanımlara izin verilmiyor ❌**"
             )
             return
         requested_by = message.from_user.first_name
@@ -312,7 +312,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)      
         await message.reply_photo(
             photo="final.png",
-            caption="▶️ **Parça Sıraya eklendi .**\n\nᴛᴀʟᴇᴘ ᴇᴅᴇɴ: {} \n\nsᴀʀᴋɪ ʟɪsᴛᴇsɪ : {}".format(usrid, position),
+            caption="▶️ **Musiqi Parçası Sıraya elave edildi .**\n\nᴛᴀʟᴇᴘ ᴇᴅᴇɴ: {} \n\nsᴀʀᴋɪ ʟɪsᴛᴇsɪ : {}".format(usrid, position),
             reply_markup=keyboard,
         )
         await message.delete()
@@ -331,7 +331,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Parça Oynatılıyor ️ . . .**\n\nɢʀᴜʙ : {}\n\nᴛᴀʟᴇᴘ ᴇᴅᴇɴ : {}".format(
+            caption="▶️ **Musiqi parçası Oynatılır ️ . . .**\n\nɢʀᴜʙ : {}\n\nᴛᴀʟᴇᴘ ᴇᴅᴇɴ : {}".format(
         message.chat.title, usrid
         ), )
         
