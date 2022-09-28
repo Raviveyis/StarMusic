@@ -17,17 +17,17 @@ async def broadcast(_, message: Message):
     if message.from_user.id not in SUDO_USERS:
         return
     else:
-        sas = await message.reply("`Yayın başlıyor, bekleyiniz ‍💻`")
+        sas = await message.reply("`Yayın başlıyır, Gözleyin ‍💻`")
         if not message.reply_to_message:
-            await sas.edit("**__Herhangi bir mesajı bana ver__**")
+            await sas.edit("**__Herhansl bir mesajı mene ver__**")
             return
         hero = message.reply_to_message.text
         async for dialog in Client.iter_dialogs():
             try:
                 await Client.send_message(dialog.chat.id, hero)
                 sent = sent+1
-                await hyper.edit(f"`Yayınlanıyor` \n\n**Başarılı :** `{sent}` Sohbetler👾 \n**Başarısız :** {failed} Sohbetler🗑️")
+                await hyper.edit(f"`Yayınlanır` \n\n**Uğurlu :** `{sent}` Söhbetler👾 \n**Uğursuz :** {failed} Söhbetler🗑️")
                 await asyncio.sleep(3)
             except:
                 failed=failed+1
-        await message.reply_photo(HERO_IMG, caption=f"Başarıyla yapıldı🧚‍♀⭐ \n\nBaşarılı**:** `{sent}` Sohbetler \n**başarısız☹️ :** {failed} Sohbetler")
+        await message.reply_photo(HERO_IMG, caption=f"Uğurla yerine yetirildi 🧚‍♀⭐ \n\nUğurlu**:** `{sent}` Söhbetler \n**Uğursuz☹️ :** {failed} Söhbetler")
